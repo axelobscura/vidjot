@@ -9,6 +9,7 @@
   "author": "Axel Obscura",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11"
   }
 }
