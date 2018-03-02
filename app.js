@@ -1,6 +1,10 @@
 const express = require('express');
+var exphbs  = require('express-handlebars');
+
 const app = express();
 
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 app.use(function(req, res, next) {
     //console.log(Date.now());
@@ -9,8 +13,9 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', (req, res) => {
-    res.send('INDEX');
-    console.log(req.name);
+    //res.send('INDEX');
+    //console.log(req.name);
+    res.render('home');
 });
 
 app.get('/about', (req, res) => {
